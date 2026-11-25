@@ -36,4 +36,28 @@ public class Calculator {
         }
         return result;
     }
+
+    /**
+     * Division of two integers.
+     * Dividing by zero is not allowed, so it throws an
+     * ArithmeticException with a clear message.
+     */
+    public int divide(int num1, int num2){
+        if (num2 == 0) {
+            throw new ArithmeticException("No se puede dividir entre cero");
+        }
+        return num1 / num2;
+    }
+
+    /**
+     * Division of two decimal numbers.
+     * With doubles Java does not fail when dividing by zero
+     * (it returns Infinity), so we check it ourselves.
+     */
+    public double divide(double num1, double num2){
+        if (num2 == 0) {
+            throw new ArithmeticException("No se puede dividir entre cero");
+        }
+        return num1 / num2;
+    }
 }
